@@ -1,5 +1,5 @@
 {
-    "family": "<APP_NAME>",
+    "family": "ecs-demo-app",
     "volumes": [
         {
             "name": "my-vol",
@@ -13,8 +13,8 @@
             "memory": 500,
             "portMappings": [
                 {
-                    "containerPort": 80,
-                    "hostPort": 80
+                    "containerPort": "<SERVICE_PORT>",
+                    "hostPort": "<SERVICE_PORT>"
                 }
             ],
             "mountPoints": [
