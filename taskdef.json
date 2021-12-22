@@ -1,12 +1,7 @@
 {
+    "family": "<APP_NAME>",
     "containerDefinitions": [
         {
-            "environment": [
-                {
-                    "name": "PORT",
-                    "value": "<SERVICE_PORT>"
-                  },
-            ],
             "name": "<APP_NAME>",
             "image": "amazon/amazon-ecs-sample",
             "cpu": 10,
