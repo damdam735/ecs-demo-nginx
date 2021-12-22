@@ -2,7 +2,7 @@
     "family": "<APP_NAME>",
     "containerDefinitions": [
         {
-            "name": "<APP_NAME>",
+            "name": "sample-app",
             "image": "amazon/amazon-ecs-sample",
             "cpu": 10,
             "memory": 500,
@@ -32,7 +32,7 @@
             "memory": 500,
             "volumesFrom": [
             {
-              "sourceContainer": "<APP_NAME>"
+              "sourceContainer": "sample-app"
             }
             ],
             "entryPoint": [
