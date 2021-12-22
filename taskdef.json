@@ -1,5 +1,5 @@
 {
-    "family": <APP_NAME>,
+    "family": "<APP_NAME>",
     "volumes": [
         {
             "name": "my-vol",
