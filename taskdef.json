@@ -1,5 +1,5 @@
 {
-    "family": "console-sample-app",
+    "family": "<APP_NAME>",
     "volumes": [
         {
             "name": "my-vol",
@@ -8,14 +8,19 @@
     ],
     "containerDefinitions": [
         {
-            "environment": [],
-            "name": "simple-app",
+            "environment": [
+                {
+                    "name": "PORT",
+                    "value": "<SERVICE_PORT>"
+                  },
+            ],
+            "name": "<APP_NAME>",
             "image": "amazon/amazon-ecs-sample",
             "cpu": 10,
             "memory": 500,
             "portMappings": [
                 {
-                    "containerPort": 80,
+                    "containerPort": "<SERVICE_PORT>",
                     "hostPort": 80
                 }
             ],
@@ -39,7 +44,7 @@
             "memory": 500,
             "volumesFrom": [
             {
-              "sourceContainer": "simple-app"
+              "sourceContainer": "<APP_NAME>"
             }
             ],
             "entryPoint": [
