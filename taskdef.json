@@ -1,11 +1,4 @@
 {
-    "family": "<APP_NAME>",
-    "volumes": [
-        {
-            "name": "my-vol",
-            "host": {}
-        }
-    ],
     "containerDefinitions": [
         {
             "environment": [
