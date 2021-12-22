@@ -1,5 +1,5 @@
 {
-    "family": "<APP_NAME>",
+    "family": "ecs-demo-app",
     "volumes": [
         {
             "name": "my-vol",
