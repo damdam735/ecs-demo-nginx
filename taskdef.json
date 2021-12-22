@@ -13,8 +13,8 @@
             "memory": 500,
             "portMappings": [
                 {
-                    "containerPort": "<SERVICE_PORT>",
-                    "hostPort": "<SERVICE_PORT>"
+                    "containerPort": <SERVICE_PORT>,
+                    "hostPort": <SERVICE_PORT>
                 }
             ],
             "mountPoints": [
