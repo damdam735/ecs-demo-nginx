@@ -1,5 +1,10 @@
 {
     "family": "<APP_NAME>",
+    "volumes": [
+        {
+            "name": "my-vol",
+            "host": {}
+        }
     "containerDefinitions": [
         {
             "name": "sample-app",
