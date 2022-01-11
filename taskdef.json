@@ -1,5 +1,5 @@
 {
-    "family": "ecs-demo-app",
+    "family": "$ECS_SERVICE_NAME",
     "volumes": [
         {
             "name": "my-vol",
