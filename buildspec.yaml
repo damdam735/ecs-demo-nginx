@@ -21,10 +21,7 @@ phases:
       - echo Pushing the Docker images...
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:latest
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
-      #- TASK_ARN=$(aws ecs describe-task-definition --task-definition $ECS_SERVICE_NAME | grep arn)
       - aws ecs describe-task-definition --task-definition $ECS_SERVICE_NAME | jq '.taskDefinition' > taskdef.json
-      #- sed -i "s|nginx:mainline-alpine|$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:latest|g" taskdef.json
-      #envsubst < taskdef_tpl.json > taskdef.json
       - envsubst < appspec_tpl.yaml > appspec.yaml
 
 artifacts:
